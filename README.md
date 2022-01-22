@@ -1,5 +1,5 @@
-## rust-sandbox
-# running
+# rust-sandbox
+## running
 set env vars:
 ```shell
 RUST_LOG=debug;RUST_LOG_STYLE=always
