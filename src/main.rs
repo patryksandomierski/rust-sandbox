@@ -19,6 +19,18 @@ impl Rectangle {
     }
 }
 
+enum Message {
+    Quit,
+    Write(String),
+}
+
+impl Message {
+    /// is it a doc?
+    fn print_on_screen(&self) {
+        println!("just printing... nothing exciting");
+    }
+}
+
 fn main() {
     let mut rect1 = Rectangle {
         width: 10,
@@ -32,6 +44,9 @@ fn main() {
 
     let rect2 = Rectangle::square(5);
     println!("square with side's length={} has area={}", rect2.height, rect2.area());
+
+    let msg = Message::Write(String::from("hello"));
+    msg.print_on_screen();
 }
 
 fn area(rect: &Rectangle) -> u32 {
