@@ -1,10 +1,10 @@
 fn main() {
     let some_str = String::from("Hello, world!");
-    let (str2, len) = tuple_to_the_rescue(some_str);
-    println!("str={} has len={}", str2, len);
+    let len = but_better_using_refs(&some_str);
+    println!("str={} has len={}", some_str, len);
 }
 
-fn tuple_to_the_rescue(str: String) -> (String, usize) {
+fn but_better_using_refs(str: &String) -> usize {
     let length = str.chars().count();
-    (str, length)
+    length
 }

@@ -9,4 +9,4 @@ run --package rust-sandbox --bin rust-sandbox
 cargo doc --open
 ```
 ## last chapter
-https://doc.rust-lang.org/book/ch03-03-how-functions-work.html#statements-and-expressions
+https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html#references-and-borrowing
