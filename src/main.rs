@@ -1,10 +1,16 @@
-fn main() {
-    let some_str = String::from("Hello, world!");
-    let len = but_better_using_refs(&some_str);
-    println!("str={} has len={}", some_str, len);
+struct Rectangle {
+    width: u32,
+    height: u32,
 }
 
-fn but_better_using_refs(str: &String) -> usize {
-    let length = str.chars().count();
-    length
+fn main() {
+    let rect1 = Rectangle {
+        width: 10,
+        height: 15,
+    };
+    println!("rect area={}", area(&rect1));
+}
+
+fn area(rect: &Rectangle) -> u32 {
+    rect.width * rect.height
 }
